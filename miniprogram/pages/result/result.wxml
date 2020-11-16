@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="resultContainer">
+    <view wx:for="{{result.results}}" class="resultItem" wx:key="ID">
+      <view class="origin">
+        <text>物品名称：{{item[settings.srcLang]}}</text>
+      </view>
+      <view class="target">
+        <text>翻译结果：{{item[settings.tgtLang]}}</text>
+      </view>
+    </view>
+    <view wx:if="{{notExistItem.length>0}}" class="warn">
+      <view class="header">
+        <text>{{notExistItem.length}}个物品没有找到！</text>
+      </view>
+      <view wx:for="{{notExistItem}}" class="notFoundItem">
+        <view class="origin">
+          <text>物品名称:{{item}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,63 @@
+/**index.wxss**/
+page{
+  background: #f7f7f7;
+  --borderRaidus:25rpx;
+  --borderColor:rgba(0,0,0,0.3)
+}
+.banner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.banner .logoImg {
+  max-width: 450rpx;
+  max-height: 15vh;
+}
+.banner .title  {
+  display: block;
+}
+.form {
+  margin-top: 15rpx;
+}
+.form .searchText {
+  margin-top: 15rpx;
+  border: 1px solid var(--borderColor);
+  border-radius: var(--borderRaidus);
+  padding: 15rpx;
+  margin-bottom: 25rpx;
+}
+.picker {
+  padding:15rpx 25rpx;
+  border: 1px solid var(--borderColor);
+  border-radius: var(--borderRaidus);
+  display: flex;
+  justify-content: space-between;
+}
+.picker.topPicker {
+  border-bottom: none;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.picker.lowerPicker {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.picker .indicator {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-color-scheme: dark){
+  page {
+    background: #191919;
+    --borderColor:hsla(0,0%,100%,0.3)
+  }
+  .container {
+    background: #191919;
+  }
+  .picker .indicator {
+    color: hsla(0, 0%, 100%, 0.5);
+  }
+  
+}

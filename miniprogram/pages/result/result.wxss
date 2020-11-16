@@ -1,0 +1,52 @@
+/* pages/result/result.wxss */
+page {
+  background: #f7f7f7;
+  --borderColor: rgba(0,0,0,0.3)
+}
+.resultContainer {
+  width: 85vw;
+  margin-top: 25rpx;
+}
+.resultContainer .resultItem {
+  margin-bottom: 2vh;
+  border: 1px solid var(--borderColor);
+  border-radius: 25rpx;
+}
+.resultContainer .resultItem .origin {
+  padding: 15rpx;
+  padding-bottom: 7.5rpx;
+  border-bottom: 1px solid var(--borderColor);
+}
+.resultContainer .resultItem .target {
+  padding: 15rpx;
+  padding-top: 7.5rpx;
+}
+.resultContainer .warn {
+  border: 1px solid;
+  border-color: #ffc017;
+  border-radius: 25rpx;
+}
+.resultContainer .warn .header {
+  padding: 15rpx;
+  background-color: rgba(0,0,0,0.03);
+  border-bottom: 1px solid var(--borderColor);
+}
+.resultContainer .notFoundItem {
+  padding: 15rpx;
+}
+
+@media (prefers-color-scheme:dark){
+  page {
+    background: #191919;
+    --borderColor:hsla(0,0%,100%,0.3)
+  }
+  .resultContainer .warn {
+    border-color: #f39c12;
+    color: #FFF;
+  }
+  .resultContainer .warn .header {
+    border-top-left-radius: 25rpx;
+    border-top-right-radius: 25rpx;
+    background-color: rgb(68,68,68);
+  }
+}

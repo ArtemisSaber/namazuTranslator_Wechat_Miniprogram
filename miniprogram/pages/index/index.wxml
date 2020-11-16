@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container" data-weui-theme="dark">
+  <view class="banner">
+    <image class="logoImg" mode="aspectFit" src="https://dirusec.com/namazu/img/logo.png"></image>
+    <text class="title">{{title}}</text>
+  </view>
+  <view class="form">
+    <view class="langSelector">
+      <picker value="{{srcLangIndex}}" range="{{srcLang}}" bindchange="changeSrcLang" range-key="name">
+        <view class="picker topPicker">
+          <text>原始语言：{{srcLang[srcLangIndex].name}}</text>
+          <text class="indicator">></text>
+        </view>
+      </picker>
+      <picker value="{{tgtLangIndex}}" range="{{tgtLang}}" bindchange="changeTgtLang" range-key="name">
+        <view class="picker lowerPicker">
+          <text>目标语言：{{tgtLang[tgtLangIndex].name}}</text>
+          <text class="indicator">></text>
+        </view>
+      </picker>
+    </view>
+    <textarea class="searchText" placeholder="请输入要翻译的物品名称" value="{{inputData}}" bindinput="bindInputValue"></textarea>
+    <button type="primary" loading="{{loading}}" class="queryButton" bindtap="performQuery">翻译</button>
+  </view>
+
+</view>
