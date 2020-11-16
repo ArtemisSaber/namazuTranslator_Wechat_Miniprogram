@@ -4,7 +4,7 @@ import { Payload,IResponse,JSONResponse, Setting } from "../../utils/class"
 import { getAPIPath, getDataVersion, initAuxilaryData, parseEngUpper } from "../../utils/util"
 
 // 获取应用实例
-const app = getApp<IAppOption>()
+const app = getApp()
 
 Page({
   data: {
@@ -73,7 +73,6 @@ Page({
     wx.getStorage({
       key: 'dataVersion',
       success(res) {
-        console.log(res.data)
         let data = JSON.parse(res.data)
         data = data.currentVersion[0]
         let dataVersion = getDataVersion()

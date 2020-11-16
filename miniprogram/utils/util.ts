@@ -99,7 +99,6 @@ export const getLocalStorage = (key: string) => {
     wx.getStorage({
       key: key,
       success(res) {
-        console.log(res.data)
         resolve(res.data)
       },
       fail(err) {
